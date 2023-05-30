@@ -15,18 +15,6 @@ public class StorePojo {
     private int lng;
     private String hours;
 
-   /* "name": "string",
-            "type": "string",
-            "address": "string",
-            "address2": "string",
-            "city": "string",
-            "state": "string",
-            "zip": "string",
-            "lat": 0,
-            "lng": 0,
-            "hours": "string",
-            "services": {}*/
-
     public String getName() {
         return name;
     }

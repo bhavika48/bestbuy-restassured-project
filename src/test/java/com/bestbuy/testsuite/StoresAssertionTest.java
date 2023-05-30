@@ -52,7 +52,7 @@ public class StoresAssertionTest {
     public void test005() {
 
         //response.body("data.findAll{it.storeid == 3}",
-         response.body("data.findAll{it.id==7}",hasItem(hasEntry("state","MN")));
+        response.body("data.findAll{it.id==7}", hasItem(hasEntry("state", "MN")));
     }
 
     //6. Check hash map values ‘createdAt’ inside storeservices map where store name = Roseville
@@ -78,7 +78,6 @@ public class StoresAssertionTest {
     @Test
     public void test009() {
         response.body("data[6].id", equalTo(12));
-
     }
 
     //10. Verify the serviceId = 4 for the 7th store of forth service

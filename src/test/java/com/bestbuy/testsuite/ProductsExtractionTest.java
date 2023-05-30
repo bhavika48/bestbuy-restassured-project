@@ -69,12 +69,10 @@ public class ProductsExtractionTest {
 
     @Test
     public void test026PrintTheSizeOfTheDataList() {
-//        int size = response.extract().path(data.lengthsize);
-//
-//
-//        System.out.println("------------------StartingTest---------------------------");
-//        System.out.println("The value of limit is : " +size);
-//        System.out.println("------------------End of Test---------------------------");
+        int size = response.extract().path("data.size");
+        System.out.println("------------------StartingTest---------------------------");
+        System.out.println("The value of limit is : " + size);
+        System.out.println("------------------End of Test---------------------------");
 
     }
 
@@ -89,7 +87,6 @@ public class ProductsExtractionTest {
 
     @Test
     public void test028GetTheModelOfTheProductWhereProductNameEnergizerNCellE90Batteries2Pack() {
-        // List<String> modelName = response.extract().path("data[8].model");
         String modelName = response.extract().path("data[8].model");
         System.out.println("------------------StartingTest---------------------------");
         System.out.println("The names of the products are :" + modelName);
@@ -183,12 +180,13 @@ public class ProductsExtractionTest {
         System.out.println("The names of the products are :" + image);
         System.out.println("------------------End of Test---------------------------");
     }
+
     @Test
     public void test040FindTheURLOfAllTheProducts() {
         //    String url = response.extract().path("data.url");
-        List<HashMap<String, ?>>url = response.extract().path("data.url");
+        List<HashMap<String, ?>> url = response.extract().path("data.url");
         System.out.println("------------------StartingTest---------------------------");
-        System.out.println("The URL of all the products: " +url);
+        System.out.println("The URL of all the products: " + url);
         System.out.println("------------------End of Test---------------------------");
     }
 }

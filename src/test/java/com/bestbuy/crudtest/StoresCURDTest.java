@@ -41,13 +41,11 @@ public class StoresCURDTest extends TestBase {
 
         response.then().log().all().statusCode(201);
 
-
     }
 
 
     @Test
     public void test002() {
-
         Response response = given()
                 .when()
                 .get("/8922");

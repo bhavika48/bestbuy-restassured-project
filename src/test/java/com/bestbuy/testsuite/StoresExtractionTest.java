@@ -62,7 +62,6 @@ public class StoresExtractionTest {
     //6. Print the size of the data list
     @Test
     public void test006() {
-
         int sizeOfData = response.extract().path("data.size");
         System.out.println("The value of sizeOfData is : " + sizeOfData);
     }
@@ -88,7 +87,6 @@ public class StoresExtractionTest {
     @Test
     public void test009GetAllTheServicesOf8thStore() {
         List<Integer> listOfServices = response.extract().path("data[8].services");
-
         System.out.println("------------------StartingTest---------------------------");
         System.out.println("List of all services of 08th stores are : " + listOfServices);
         System.out.println("------------------End of Test---------------------------");
@@ -98,7 +96,6 @@ public class StoresExtractionTest {
     @Test
     public void test011GetAllTheStoreIdOfAllTheStore() {
         List<Integer> serviceName = response.extract().path("data.storeservices");
-
         System.out.println("------------------StartingTest---------------------------");
         System.out.println("List of Ids are : " + serviceName);
         System.out.println("------------------End of Test---------------------------");
